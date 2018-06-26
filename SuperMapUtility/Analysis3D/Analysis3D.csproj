@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C452528-358E-4781-8E2E-E76249F86D3A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SuperMap.SampleCode.Realspace</RootNamespace>
+    <AssemblyName>Analysis3D</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\BinD\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\BinD\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\Bin\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\BinD\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>..\..\Bin_x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SuperMap.Analyst.AddressMatching, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Analyst.AddressMatching.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Analyst.Navigation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Analyst.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Analyst.NetworkAnalyst, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Analyst.NetworkAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Analyst.SpatialAnalyst, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Analyst.SpatialAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Analyst.SpatialStatistics, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Analyst.SpatialStatistics.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Analyst.TerrainAnalyst, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Analyst.TerrainAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Analyst.TrafficAnalyst, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Analyst.TrafficAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Chart, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Data">
+      <HintPath>E:\SuperMap\SMO_DOTNET\SampleCode\Bin\SuperMap.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Data.Conversion, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Data.Conversion.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Data.Processing, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Data.Processing.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Data.TileStorage, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Data.TileStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Data.Topology, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Data.Topology.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.DataEx, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.DataEx.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Layout, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Mapping">
+      <HintPath>E:\SuperMap\SMO_DOTNET\SampleCode\Bin\SuperMap.Mapping.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Plot, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Plot.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Realspace">
+      <HintPath>E:\SuperMap\SMO_DOTNET\SampleCode\Bin\SuperMap.Realspace.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Realspace.NetworkAnalyst, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Realspace.NetworkAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Realspace.SpatialAnalyst">
+      <HintPath>E:\SuperMap\SMO_DOTNET\SampleCode\Bin\SuperMap.Realspace.SpatialAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Realspace.ThreeDDesigner, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinD\SuperMap.Realspace.ThreeDDesigner.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.UI.Controls">
+      <HintPath>E:\SuperMap\SMO_DOTNET\SampleCode\Bin\SuperMap.UI.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DlgClipPlane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgClipPlane.Designer.cs">
+      <DependentUpon>DlgClipPlane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgContourMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgContourMap.Designer.cs">
+      <DependentUpon>DlgContourMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgFloodAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgFloodAnalysis.Designer.cs">
+      <DependentUpon>DlgFloodAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgProfileAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgProfileAnalysis.Designer.cs">
+      <DependentUpon>DlgProfileAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgShadowAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgShadowAnalysis.Designer.cs">
+      <DependentUpon>DlgShadowAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgSightLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgSightLine.Designer.cs">
+      <DependentUpon>DlgSightLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgSkyline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgSkyline.Designer.cs">
+      <DependentUpon>DlgSkyline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgSlopeMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgSlopeMap.Designer.cs">
+      <DependentUpon>DlgSlopeMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgSunTrajectory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgSunTrajectory.Designer.cs">
+      <DependentUpon>DlgSunTrajectory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgViewShedAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgViewShedAnalysis.Designer.cs">
+      <DependentUpon>DlgViewShedAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DlgClipPlane.resx">
+      <DependentUpon>DlgClipPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgContourMap.resx">
+      <DependentUpon>DlgContourMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgFloodAnalysis.resx">
+      <DependentUpon>DlgFloodAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgProfileAnalysis.resx">
+      <DependentUpon>DlgProfileAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgShadowAnalysis.resx">
+      <DependentUpon>DlgShadowAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgSightLine.resx">
+      <DependentUpon>DlgSightLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgSkyline.resx">
+      <DependentUpon>DlgSkyline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgSlopeMap.resx">
+      <DependentUpon>DlgSlopeMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgSunTrajectory.resx">
+      <DependentUpon>DlgSunTrajectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgViewShedAnalysis.resx">
+      <DependentUpon>DlgViewShedAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

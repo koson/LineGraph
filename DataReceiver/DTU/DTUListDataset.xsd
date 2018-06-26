@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DTUListDataset" targetNamespace="http://tempuri.org/DTUListDataset.xsd" xmlns:mstns="http://tempuri.org/DTUListDataset.xsd" xmlns="http://tempuri.org/DTUListDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DTUListDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DTUListDataset" msprop:Generator_DataSetName="DTUListDataset" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTUList" msprop:Generator_UserTableName="DTUList" msprop:Generator_RowDeletedName="DTUListRowDeleted" msprop:Generator_RowChangedName="DTUListRowChanged" msprop:Generator_RowClassName="DTUListRow" msprop:Generator_RowChangingName="DTUListRowChanging" msprop:Generator_RowEvArgName="DTUListRowChangeEvent" msprop:Generator_RowEvHandlerName="DTUListRowChangeEventHandler" msprop:Generator_TableClassName="DTUListDataTable" msprop:Generator_TableVarName="tableDTUList" msprop:Generator_RowDeletingName="DTUListRowDeleting" msprop:Generator_TablePropName="DTUList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:Caption="ID号码" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:unsignedInt" />
+              <xs:element name="PhoneNO" msdata:Caption="电话号码" msprop:Generator_UserColumnName="PhoneNO" msprop:Generator_ColumnVarNameInTable="columnPhoneNO" msprop:Generator_ColumnPropNameInRow="PhoneNO" msprop:Generator_ColumnPropNameInTable="PhoneNOColumn" type="xs:string" />
+              <xs:element name="DynIP" msdata:Caption="动态IP" msprop:Generator_UserColumnName="DynIP" msprop:Generator_ColumnVarNameInTable="columnDynIP" msprop:Generator_ColumnPropNameInRow="DynIP" msprop:Generator_ColumnPropNameInTable="DynIPColumn" type="xs:string" />
+              <xs:element name="ConnectTime" msdata:Caption="建立连接时间" msprop:Generator_UserColumnName="ConnectTime" msprop:Generator_ColumnVarNameInTable="columnConnectTime" msprop:Generator_ColumnPropNameInRow="ConnectTime" msprop:Generator_ColumnPropNameInTable="ConnectTimeColumn" type="xs:dateTime" />
+              <xs:element name="LastActTime" msdata:Caption="最后活动时间" msprop:Generator_UserColumnName="LastActTime" msprop:Generator_ColumnVarNameInTable="columnLastActTime" msprop:Generator_ColumnPropNameInRow="LastActTime" msprop:Generator_ColumnPropNameInTable="LastActTimeColumn" type="xs:dateTime" />
+              <xs:element name="Visible" msprop:Generator_UserColumnName="Visible" msprop:Generator_ColumnPropNameInRow="Visible" msprop:Generator_ColumnVarNameInTable="columnVisible" msprop:Generator_ColumnPropNameInTable="VisibleColumn" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="DTUListKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DTUList" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E9903CF-0A29-4C95-9666-B76AF690C56D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LineGraph</RootNamespace>
+    <AssemblyName>LineGraph</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Bin64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\Bin64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CIGIS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LineGraph.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="LineGraph.DataReceiver">
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.DataReceiver.dll</HintPath>
+    </Reference>
+    <Reference Include="LineGraph.Designer">
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="LineGraph.GUI">
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="LineGraph.SQLUtility">
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.SQLUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="LineGraph.SuperMapUtility">
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.SuperMapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Data, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\SuperMapRef\SuperMap.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Mapping, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\SuperMapRef\SuperMap.Mapping.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Realspace, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\SuperMapRef\SuperMap.Realspace.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.UI.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\SuperMapRef\SuperMap.UI.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainFormDingZhou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormDingZhou.designer.cs">
+      <DependentUpon>MainFormDingZhou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormG.Designer.cs">
+      <DependentUpon>MainFormG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormJuXian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormJuXian.designer.cs">
+      <DependentUpon>MainFormJuXian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormRoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormRoad.designer.cs">
+      <DependentUpon>MainFormRoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\ziti1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\chengqiang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\projectname.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\gugong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CIGIS.ico" />
+    <None Include="Resource\LOGO_Earth.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

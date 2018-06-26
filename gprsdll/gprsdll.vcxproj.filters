@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8b78535b-e71e-4627-a32b-33a2fbe72d25}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="DLL">
+      <UniqueIdentifier>{db902006-9afe-4b27-ae69-8f2cf961a884}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Gprs.cpp">
+      <Filter>DLL</Filter>
+    </ClCompile>
+    <ClCompile Include="gprsdll.cpp">
+      <Filter>DLL</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>DLL</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Gprs.h">
+      <Filter>DLL</Filter>
+    </ClInclude>
+    <ClInclude Include="gprsdll.h">
+      <Filter>DLL</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>DLL</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\gprsdll.rc2">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ReadMe.txt">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gprsdll.def">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gprsdll.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

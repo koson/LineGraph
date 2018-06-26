@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{240477D7-18B8-4273-9451-7115A22A8CE5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LineGraph.GUI</RootNamespace>
+    <AssemblyName>LineGraph.GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Bin64\Ref\LineGraphRef\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\Bin64\Ref\LineGraphRef\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CIGIS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LineGraph.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DingZhou\WndHeaderDingZhou.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DingZhou\WndHeaderDingZhou.designer.cs">
+      <DependentUpon>WndHeaderDingZhou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DingZhou\WndMenuListDingZhou.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DingZhou\WndMenuListDingZhou.designer.cs">
+      <DependentUpon>WndMenuListDingZhou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuGong\SplashScreenGuGong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuGong\SplashScreenGuGong.designer.cs">
+      <DependentUpon>SplashScreenGuGong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuGong\WndHeaderG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuGong\WndHeaderG.designer.cs">
+      <DependentUpon>WndHeaderG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuGong\WndMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuGong\WndMenu.designer.cs">
+      <DependentUpon>WndMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuGong\WndMenuList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuGong\WndMenuList.designer.cs">
+      <DependentUpon>WndMenuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JuXian\WndHeaderJuXian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JuXian\WndHeaderJuXian.designer.cs">
+      <DependentUpon>WndHeaderJuXian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JuXian\WndMenuListJuXian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JuXian\WndMenuListJuXian.designer.cs">
+      <DependentUpon>WndMenuListJuXian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Road\WndHeaderRoad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Road\WndHeaderRoad.designer.cs">
+      <DependentUpon>WndHeaderRoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Road\WndMenuListRoad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Road\WndMenuListRoad.designer.cs">
+      <DependentUpon>WndMenuListRoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorWnd\DataShowWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensorWnd\DataShowWnd.designer.cs">
+      <DependentUpon>DataShowWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorWnd\FlowPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SensorWnd\FlowPanel.designer.cs">
+      <DependentUpon>FlowPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorWnd\SensorWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensorWnd\SensorWnd.designer.cs">
+      <DependentUpon>SensorWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Temprature\ManometerBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Temprature\TempratureControlWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temprature\TempratureControlWnd.designer.cs">
+      <DependentUpon>TempratureControlWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Temprature\TempratureMeterWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Temprature\TempratureMeterWnd.designer.cs">
+      <DependentUpon>TempratureMeterWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Temprature\Thermometer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Temprature\TOPO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DingZhou\WndHeaderDingZhou.resx">
+      <DependentUpon>WndHeaderDingZhou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DingZhou\WndMenuListDingZhou.resx">
+      <DependentUpon>WndMenuListDingZhou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuGong\WndHeaderG.resx">
+      <DependentUpon>WndHeaderG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuGong\WndMenuList.resx">
+      <DependentUpon>WndMenuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuXian\WndHeaderJuXian.resx">
+      <DependentUpon>WndHeaderJuXian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuXian\WndMenuListJuXian.resx">
+      <DependentUpon>WndMenuListJuXian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Road\WndHeaderRoad.resx">
+      <DependentUpon>WndHeaderRoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Road\WndMenuListRoad.resx">
+      <DependentUpon>WndMenuListRoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensorWnd\DataShowWnd.resx">
+      <DependentUpon>DataShowWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensorWnd\FlowPanel.resx">
+      <DependentUpon>FlowPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensorWnd\SensorWnd.resx">
+      <DependentUpon>SensorWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temprature\TempratureControlWnd.resx">
+      <DependentUpon>TempratureControlWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temprature\TempratureMeterWnd.resx">
+      <DependentUpon>TempratureMeterWnd.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\chengqiang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\LoginBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\SplashScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\ThermometerIcon.bmp" />
+    <None Include="Resource\Reflection.jpg" />
+    <None Include="Resource\资源管理4.png" />
+    <None Include="Resource\资源管理3.png" />
+    <None Include="Resource\资源管理2.png" />
+    <None Include="Resource\资源管理1.png" />
+    <None Include="Resource\信息采集4.png" />
+    <None Include="Resource\信息采集3.png" />
+    <None Include="Resource\信息采集2.png" />
+    <None Include="Resource\信息采集1.png" />
+    <None Include="Resource\项目情况3.png" />
+    <None Include="Resource\项目情况2.png" />
+    <None Include="Resource\项目情况1.png" />
+    <None Include="Resource\系统帮助4.png" />
+    <None Include="Resource\系统帮助3.png" />
+    <None Include="Resource\系统帮助2.png" />
+    <None Include="Resource\系统帮助1.png" />
+    <None Include="Resource\数据查询3.png" />
+    <None Include="Resource\数据查询2.png" />
+    <None Include="Resource\数据查询1.png" />
+    <None Include="Resource\实时监测4.png" />
+    <None Include="Resource\实时监测3.png" />
+    <None Include="Resource\实时监测2.png" />
+    <None Include="Resource\实时监测1.png" />
+    <None Include="Resource\场景测量3.png" />
+    <None Include="Resource\场景测量2.png" />
+    <None Include="Resource\场景测量1.png" />
+    <None Include="Resource\Roadziti.png" />
+    <None Include="Resource\Road.png" />
+    <None Include="Resource\projectnameRoad.png" />
+    <None Include="Resource\statistics1.png" />
+    <None Include="Resource\settings.png" />
+    <None Include="Resource\predict.png" />
+    <None Include="Resource\peoject.png" />
+    <None Include="Resource\SplashGuGong.png" />
+    <None Include="Resource\gugong.png" />
+    <None Include="Resource\backgroundG.png" />
+    <None Include="Resource\LoginBackGuGong.jpg" />
+    <None Include="Resource\help.png" />
+    <None Include="Resource\backgroundRoad.jpg" />
+    <None Include="Resource\backgroundRoad.png" />
+    <None Include="Resource\backgroundJuXian.jpg" />
+    <Content Include="CIGIS.ico" />
+    <None Include="Resource\backgroundDingZhou.jpg" />
+    <Content Include="Resource\LOGO_Earth.ico" />
+    <None Include="Resource\ziti1.png" />
+    <None Include="Resource\projectname.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

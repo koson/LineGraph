@@ -1,0 +1,16 @@
+; gprsdll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "gprsdll"
+DESCRIPTION  'gprsdll Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	DLLStartService          @1
+	DLLStopService           @2
+	DLLGetNextData           @3
+	DLLSendData              @4
+	DLLGetModemCount         @5
+	DLLGetModemByPosition    @6
+	DLLSendControl           @7
+    DLLGetLastError          @8
+    DLLCloseModemById		 @9

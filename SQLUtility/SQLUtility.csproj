@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57238156-62D6-4567-8E8F-1E6D020C24B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LineGraph.SQLUtility</RootNamespace>
+    <AssemblyName>LineGraph.SQLUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin64\Ref\LineGraphRef\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Bin64\Ref\LineGraphRef\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\Bin64\Ref\LineGraphRef\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CIGIS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LineGraph.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="LineGraph.DataAnalyze, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.DataAnalyze.dll</HintPath>
+    </Reference>
+    <Reference Include="LineGraph.DataGraph, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.DataGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="LineGraph.GUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\LineGraph.GUI.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\LineGraphRef\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperMap.Data, Version=7.0.0.0, Culture=neutral, PublicKeyToken=0635c574ea890381, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin64\Ref\SuperMapRef\SuperMap.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BindingCollection.cs" />
+    <Compile Include="CameraView\CameraViewWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CameraView\CameraViewWnd.designer.cs">
+      <DependentUpon>CameraViewWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="DataAnalyzeWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataAnalyzeWnd.designer.cs">
+      <DependentUpon>DataAnalyzeWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device\AddressBook.cs" />
+    <Compile Include="Device\DeviceAddressWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Device\DeviceAddressWnd.designer.cs">
+      <DependentUpon>DeviceAddressWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device\DeviceCompanyWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Device\DeviceCompanyWnd.designer.cs">
+      <DependentUpon>DeviceCompanyWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device\DeviceInfoWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Device\DeviceInfoWnd.designer.cs">
+      <DependentUpon>DeviceInfoWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device\DeviceInfo_AddWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Device\DeviceInfo_AddWnd.designer.cs">
+      <DependentUpon>DeviceInfo_AddWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device\DeviceStyleWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Device\DeviceStyleWnd.designer.cs">
+      <DependentUpon>DeviceStyleWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\Account.cs" />
+    <Compile Include="Finance\AccountCollection.cs" />
+    <Compile Include="Finance\AccountManager.cs" />
+    <Compile Include="Finance\FormAccountManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\FormAccountManage.designer.cs">
+      <DependentUpon>FormAccountManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\FormAddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\FormAddAccount.designer.cs">
+      <DependentUpon>FormAddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\FinanceFormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\FinanceFormMain.designer.cs">
+      <DependentUpon>FinanceFormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\FormPswModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\FormPswModify.designer.cs">
+      <DependentUpon>FormPswModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\User.cs" />
+    <Compile Include="Finance\UserCollection.cs" />
+    <Compile Include="Finance\UserManager.cs" />
+    <Compile Include="FormSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSQL.designer.cs">
+      <DependentUpon>FormSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPSCtrl\GPSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPSCtrl\GPSForm.designer.cs">
+      <DependentUpon>GPSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Human\DBAccess.cs" />
+    <Compile Include="Human\frmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Human\frmAdd.designer.cs">
+      <DependentUpon>frmAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Human\frmAddressList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Human\frmAddressList.designer.cs">
+      <DependentUpon>frmAddressList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Human\frmEmployInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Human\frmEmployInfo.designer.cs">
+      <DependentUpon>frmEmployInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Human\frmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Human\frmUpdate.designer.cs">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Human\Modules.cs" />
+    <Compile Include="Human\UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Human\UserAdd.designer.cs">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Human\UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Human\UserList.designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSQL\LoginDingZhou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSQL\LoginDingZhou.designer.cs">
+      <DependentUpon>LoginDingZhou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSQL\LoginGuGong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSQL\LoginGuGong.designer.cs">
+      <DependentUpon>LoginGuGong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSQL\LoginJuXian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSQL\LoginJuXian.designer.cs">
+      <DependentUpon>LoginJuXian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSQL\LoginRoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSQL\LoginRoad.designer.cs">
+      <DependentUpon>LoginRoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSQL\MySQLDB.cs" />
+    <Compile Include="LoginSQL\MySQLLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSQL\MySQLLogin.designer.cs">
+      <DependentUpon>MySQLLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceCtrl\User_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResourceCtrl\User_add.designer.cs">
+      <DependentUpon>User_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceCtrl\Goods_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResourceCtrl\Goods_add.designer.cs">
+      <DependentUpon>Goods_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceCtrl\Goods_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResourceCtrl\Goods_Management.designer.cs">
+      <DependentUpon>Goods_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceCtrl\User_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResourceCtrl\User_Management.designer.cs">
+      <DependentUpon>User_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorCtrl\DataGridViewWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SensorCtrl\DataGridViewWnd.designer.cs">
+      <DependentUpon>DataGridViewWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorCtrl\JiaSu_DataGridWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SensorCtrl\JiaSu_DataGridWnd.designer.cs">
+      <DependentUpon>JiaSu_DataGridWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorCtrl\JiaSu_DataViewWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SensorCtrl\JiaSu_DataViewWnd.designer.cs">
+      <DependentUpon>JiaSu_DataViewWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorCtrl\QingJiao_DataGridWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SensorCtrl\QingJiao_DataGridWnd.designer.cs">
+      <DependentUpon>QingJiao_DataGridWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorCtrl\QingJiao_DataViewWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SensorCtrl\QingJiao_DataViewWnd.designer.cs">
+      <DependentUpon>QingJiao_DataViewWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorCtrl\ShuiZhun_DataGridWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SensorCtrl\ShuiZhun_DataGridWnd.designer.cs">
+      <DependentUpon>ShuiZhun_DataGridWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorCtrl\ShuiZhun_DataViewWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SensorCtrl\ShuiZhun_DataViewWnd.designer.cs">
+      <DependentUpon>ShuiZhun_DataViewWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeCtrl\trees_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreeCtrl\trees_add.designer.cs">
+      <DependentUpon>trees_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeCtrl\trees_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreeCtrl\trees_Management.designer.cs">
+      <DependentUpon>trees_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeCtrl\YangHu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreeCtrl\YangHu.designer.cs">
+      <DependentUpon>YangHu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CameraView\CameraViewWnd.resx">
+      <DependentUpon>CameraViewWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAnalyzeWnd.resx">
+      <DependentUpon>DataAnalyzeWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Device\DeviceAddressWnd.resx">
+      <DependentUpon>DeviceAddressWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Device\DeviceCompanyWnd.resx">
+      <DependentUpon>DeviceCompanyWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Device\DeviceInfoWnd.resx">
+      <DependentUpon>DeviceInfoWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Device\DeviceInfo_AddWnd.resx">
+      <DependentUpon>DeviceInfo_AddWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Device\DeviceStyleWnd.resx">
+      <DependentUpon>DeviceStyleWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\FormAccountManage.resx">
+      <DependentUpon>FormAccountManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\FormAddAccount.resx">
+      <DependentUpon>FormAddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\FinanceFormMain.resx">
+      <DependentUpon>FinanceFormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\FormPswModify.resx">
+      <DependentUpon>FormPswModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSQL.resx">
+      <DependentUpon>FormSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPSCtrl\GPSForm.resx">
+      <DependentUpon>GPSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human\frmAdd.resx">
+      <DependentUpon>frmAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human\frmAddressList.resx">
+      <DependentUpon>frmAddressList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human\frmEmployInfo.resx">
+      <DependentUpon>frmEmployInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human\frmUpdate.resx">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human\UserAdd.resx">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginSQL\MySQLLogin.resx">
+      <DependentUpon>MySQLLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceCtrl\User_add.resx">
+      <DependentUpon>User_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceCtrl\Goods_add.resx">
+      <DependentUpon>Goods_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceCtrl\Goods_Management.resx">
+      <DependentUpon>Goods_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceCtrl\User_Management.resx">
+      <DependentUpon>User_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeCtrl\trees_add.resx">
+      <DependentUpon>trees_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeCtrl\trees_Management.resx">
+      <DependentUpon>trees_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeCtrl\YangHu.resx">
+      <DependentUpon>YangHu.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\LoginBackGuGong.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\LoginBackRoad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CIGIS.ico" />
+    <None Include="Resource\LoginBackDingZhou.jpg" />
+    <None Include="Resource\out.jpg" />
+    <None Include="Resource\folder_31.425908667288px_1202411_easyicon.net.png" />
+    <None Include="Resource\Add_128px_1194719_easyicon.net.png" />
+    <None Include="Resource\system_software_update_64px_1172143_easyicon.net.png" />
+    <None Include="Resource\Delete_64px_1181442_easyicon.net.png" />
+    <None Include="Resource\植被种类.png" />
+    <None Include="Resource\tree_NodeExpend.png" />
+    <None Include="Resource\tree_NodeCollaps.png" />
+    <None Include="Resource\tree_Selected.png" />
+    <None Include="Resource\tree_Hover.png" />
+    <None Include="Resource\LoginBackJuXian.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
